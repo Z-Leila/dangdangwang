@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+
+	<meta name="keywords" content="当当网，当当，网上购物，网上商城，网上买书，购物中心，在线购物，图书，影视，音像，教育音像，CD， DVD，百货，母婴，家居，家纺，厨具，化妆品，美妆，个人护理用品，数码，电脑，笔记本，u盘，手机，mp3，mp4，数码相机，摄影，摄像，家电，软件，游戏，服装，鞋，礼品箱包，钟表首饰，玩具，运动健康用品">
+	<title>当当触屏版</title>
+	<!-- bower:css -->
+	
+	<link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.css" />
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<!-- endbower -->
+	
+</head>
+<body>
+    <!-- 悬浮广告区 -->
+	<section class="app-download-wrapper" data-pos="top">
+		<a class="close-app-download"></a>
+		<a class="app-download half" href="javascript:void(0)">
+		  <img class="" src="./images/ad1.jpg">
+		</a>
+		<a class="app-download half" href="javascript:void(0)">
+		  <img class="" src="./images/ad2.jpg">
+		</a>
+	</section>
+	<!-- 搜索区 -->
+	<header id="search" dd_name="首页搜索区">
+		<div class="dd-logo">
+			<a href="#" dd_name="logo跳转">当当</a>
+		</div>
+		<div class="search_box">
+			<div class="search">
+				<form id="index_search_form" method="get" action="" target="_parent" onsubmit="return submit_search();">
+					<div class="text_box">
+						<input id="keyword" name="keyword" type="text" placeholder="不一样的卡梅拉" class="keyword text" onkeydown="this.style.color='#404040'" autocomplete="off">
+					</div>
+					<input type="submit" value="" class="submit" dd_name="搜索">
+					<input type="hidden" value="" name="sid">
+				</form>
+			</div>
+		</div>
+		<div class="header-category"><a href="#" dd_name="跳转分类"><em>分类</em></a></div>
+		<div class="search_list"></div>
+	</header>
+	<!-- 轮播图 -->
+	<section id="wrapper">
+		<!-- <section class="top-slider-wrapper" dd_name="首页焦点轮播区">
+			<section data-widget="topSlider" class="J_top_slider index-slider">
+				<ul class="top-slider" style="width:700%;transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);transition-duration: 0ms;transform: translate(0px, 0px) translateZ(0px);">
+					<li style="width:14.285714285714%">
+					<a href="#" dd_name="焦点轮播图1">
+							<img src="./images/1.jpg" alt="预留">
+						</a>
+					</li>
+					<li style="width:14.285714285714%">
+						<a href="#" dd_name="焦点轮播图2">
+							<img class="lazy" imgsrc="./images/2.jpg" alt="预留">
+						</a>
+					</li>
+					<li style="width:14.285714285714%">
+						<a href="#" dd_name="焦点轮播图3">
+							<img class="lazy" imgsrc="./images/3.jpg" alt="预留">
+						</a>
+					</li>
+					<li style="width:14.285714285714%">
+						<a href="#" dd_name="焦点轮播图4">
+							<img class="lazy" imgsrc="./images/4.jpg" alt="预留">
+						</a>
+					</li>
+					<li style="width:14.285714285714%">
+						<a href="#" dd_name="焦点轮播图5">
+							<img class="lazy" imgsrc="./images/5.jpg" alt="预留">
+						</a>
+					</li>
+					<li style="width:14.285714285714%">
+						<a href="#" dd_name="焦点轮播图6">
+							<img class="lazy" imgsrc="./images/6.jpg" alt="预留">
+						</a>
+					</li>
+					<li style="width:14.285714285714%">
+						<a href="#" dd_name="焦点轮播图7">
+							<img class="lazy" imgsrc="./images/7.jpg" alt="预留">
+						</a>
+					</li>
+				</ul>
+				<div class="top-slider-indicator">
+					<span class="dot on"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+		  </section>
+	</section> -->
+	
+	 <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/1.jpg" alt="预留"></div>
+            <div class="swiper-slide"><img src="./images/2.jpg" alt="预留"></div>
+            <div class="swiper-slide"><img src="./images/3.jpg" alt="预留"></div>
+            <div class="swiper-slide"><img src="./images/4.jpg" alt="预留"></div>
+            <div class="swiper-slide"><img src="./images/5.jpg" alt="预留"></div>
+            <div class="swiper-slide"><img src="./images/6.jpg" alt="预留"></div>
+            <div class="swiper-slide"><img src="./images/7.jpg" alt="预留"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+		<!-- 功能区 -->
+		<ul class="index-nav" dd_name="首页功能区">
+			<li>
+			  <a href="#" dd_name="分类">
+			    <img class="lazy"  src="./images/fenlei.png" >
+			    <span>分类</span>
+			  </a>
+			</li>
+			<li>
+			  <a href="#" dd_name="APP下载">
+			   <img class="lazy"  src="./images/xiazai.png" >
+			   <span>APP下载</span>
+			   </a>
+			</li>
+			<li>
+			  <a href="#" dd_name="购物车">
+			    <img class="lazy"  src="./images/gouwuche.png" >
+			    <span>购物车</span>
+			  </a>
+		    </li>
+			<li>
+			   <a href="#" dd_name="我的当当">
+			   <img class="lazy"  src="./images/wodedangdang.png" >
+			   <span>我的当当</span>
+			   </a>
+			</li>
+			<li>
+			  <a href="#" dd_name="好书榜">
+			    <img class="lazy"  src="./images/haoshubang.png" >
+			    <span>好书榜</span>
+			  </a>
+			</li>
+			<li>
+			    <a href="#" dd_name="童书榜">
+			      <img class="lazy"  src="./images/tognshubang.png" >
+			      <span>童书榜</span>
+			    </a>
+			</li>
+			<li>
+			    <a href="#" dd_name="领券中心">
+			      <img class="lazy"  src="./images/lingq.png" >
+			      <span>领券中心</span>
+			    </a>
+			</li>
+			<li>
+			  <a href="#" dd_name="电子书">
+			    <img class="lazy"  src="./images/dianzihsu.png" >
+			    <span>电子书</span>
+			  </a>
+			</li>
+		</ul>
+<!-- 秒杀 -->
+<section class="seckilling" dd_name="首页秒杀区">
+	<div class="seckilling-box"> 
+		<div class="seckilling-title">
+			<span class="seckilling-name">秒杀</span>
+			<span class="seckilling-icon"></span> 
+			<div class="seckilling-content" data-widget='countdown'  data-end-time="1464883201" data-left-time="4942" data-is-begin="0">
+				<span data-countdown-role="hour" class="s_t"><span>0</span><span>0</span></span> 
+				<span class="s_d">:</span> 
+				<span data-countdown-role="min" class="s_t"><span>0</span><span>0</span></span> 
+				<span class="s_d">:</span> 
+				<span data-countdown-role="sec" class="s_t"><span>0</span><span>0</span></span> 
+			</div> 
+		</div> 
+		<div class="seckilling-con" id="seckill_index"> 
+			<ul class="clearfix">
+				<li>
+				<a href="#" dd_name="秒杀品1">
+						<p class="pic"><img class="lazy"  src="./images/m1.jpg"/></p>
+						<p class="price">
+							<span class="rob">
+								<span class="sign">&yen;</span>
+								<span class="num">369.00</span>
+								<span class="tail"></span>
+							</span>
+							<!--<span class="discount">折</span>-->
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" dd_name="秒杀品2">
+						<p class="pic"><img class="lazy" src="./images/m2.jpg"/></p>
+						<p class="price">
+							<span class="rob">
+								<span class="sign">&yen;</span>
+								<span class="num">29.90</span>
+								<span class="tail"></span>
+							</span>
+							<!--<span class="discount">折</span>-->
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#" dd_name="秒杀品3">
+						<p class="pic"><img class="lazy" src="./images/m3.jpg"/></p>
+						<p class="price">
+							<span class="rob">
+								<span class="sign">&yen;</span>
+								<span class="num">11.00</span>
+								<span class="tail"></span>
+							</span>
+							<!--<span class="discount">折</span>-->
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!-- 一层发现好书 -->
+<section class="floor" dd_name="发现好书">
+	<h2>
+		<a class="title">发现好书</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy"  src="./images/f1/xx1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy"  src="./images/f1/xx2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy"  src="./images/f1/xx3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- 二层缤纷童书 -->
+<section class="floor" dd_name="缤纷童书">
+	<h2>
+		<a class="title">缤纷童书</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy" src="./images/f2/xx1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy" src="./images/f2/xx2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy" src="./images/f2/xx3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- 三层尾品会 -->
+<section class="floor" dd_name="尾品汇">
+	<h2>
+		<a class="title">尾品汇</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt>
+		  <a href="#" dd_name="">
+		    <img class="lazy" src="./images/f3/xx1.jpg">
+		  </a>
+		</dt>
+		<dd>
+		  <a href="#">
+		   <img class="lazy" src="./images/f3/xx2.jpg">
+		  </a>
+		</dd>
+		<dd>
+		  <a href="#">
+		  <img class="lazy" src="./images/f3/xx3.jpg">
+		  </a>
+		</dd>
+	</dl>
+</section>
+<!-- 楼间推荐区 -->
+<section class="banner" dd_name="楼间推荐区">
+	<li>
+	  <a href="#" dd_name="静态推荐">
+	   <img class="lazy" src="./images/manzhu.jpg" alt="">
+	  </a>
+	</li>
+</section>
+<!-- 第二区 -->
+<!-- f1 -->
+<section class="floor" dd_name="最值当.抢购">
+	<h2>
+		<a class="title">最值当.抢购</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy" src="./images/f4/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy" src="./images/f4/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy" src="./images/f4/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f2 -->
+<section class="floor" dd_name="CHIC女装">
+	<h2>
+		<a class="title">CHIC女装</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+	<dt><a href="#" dd_name=""><img class="lazy" src="./images/f5/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy" src="./images/f5/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy" src="./images/f5/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f2 楼间推荐 -->
+<section class="banner" dd_name="楼间推荐区">
+	<li>
+	  <a href="#" dd_name="静态推荐">
+	     <img class="lazy" src="./images/推荐2.jpg" alt="">
+	  </a>
+	</li>
+</section>
+<!-- f3 -->
+<section class="floor" dd_name="GO男装">
+	<h2>
+		<a class="title">GO男装</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy"  src="./images/f6/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy"  src="./images/f6/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy"  src="./images/f6/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f3楼间推荐 -->
+<section class="banner" dd_name="楼间推荐区">
+	<li>
+	   <a href="#" dd_name="静态推荐">
+	      <img class="lazy" src="./images/推荐3.jpg" alt="">
+	   </a>
+	</li>
+</section>
+<!-- f4品牌日 -->
+<section class="floor" dd_name="品牌日">
+	<h2>
+		<a class="title">品牌日</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy"  src="./images/f7/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy"  src="./images/f7/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy"  src="./images/f7/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f4楼间推荐 -->
+<section class="banner" dd_name="楼间推荐区">
+<li><a href="#" dd_name="静态推荐"><img class="lazy" src="./images/推荐4.jpg" alt=""></a></li>
+</section>
+<!-- f5发现好书 -->
+<section class="floor" dd_name="发现好书">
+	<h2>
+		<a class="title">发现好书</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy"  src="./images/f8/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy"  src="./images/f8/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy"  src="./images/f8/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f6缤纷书童 -->
+<section class="floor" dd_name="缤纷童书">
+	<h2>
+		<a class="title">缤纷童书</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy" src="./images/f9/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy" src="./images/f9/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy" src="./images/f9/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f7child&baby -->
+<section class="floor" dd_name="Baby&Child">
+	<h2>
+		<a class="title">Baby&Child</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy"  src="./images/f10/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy"  src="./images/f10/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy" src="./images/f10/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f7楼间推荐 -->
+<section class="banner" dd_name="楼间推荐区">
+	<li><a href="#" dd_name="静态推荐"><img class="lazy" src="./images/推荐5.jpg" alt=""></a></li>
+</section>
+<!-- f8腔调生活 -->
+<section class="floor" dd_name="腔调生活">
+	<h2>
+		<a class="title">腔调生活</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy"  src="./images/f11/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy"  src="./images/f11/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy"  src="./images/f11/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f12 自有品牌 -->
+<section class="floor" dd_name="自有品牌">
+	<h2>
+		<a class="title">自有品牌</a>
+		<a href="#" class="more" dd_name="更多">更多</a>
+	</h2>
+	<dl>
+		<dt><a href="#" dd_name=""><img class="lazy"  src="./images/f12/1.jpg"></a></dt>
+		<dd><a href="#"><img class="lazy"  src="./images/f12/2.jpg"></a></dd>
+		<dd><a href="#"><img class="lazy"  src="./images/f12/3.jpg"></a></dd>
+	</dl>
+</section>
+<!-- f8楼间推荐 -->
+<section class="banner" dd_name="楼间推荐区">
+	<li><a href="#" dd_name="静态推荐"><img class="lazy" src="./images/推荐6.jpg" alt=""></a></li>
+</section>
+<!-- 主题馆 -->
+<section class="market" dd_name="主题馆">
+	<h2>
+		<a class="title">主题馆</a>
+	</h2>
+	<ul>
+	    <li>
+	      <a href="#" dd_name="图书">
+	        <img class="lazy" src="./images/t1.jpg" alt="图书">
+	      </a>
+	    </li>
+		<li>
+		  <a href="#" dd_name="童书">
+		    <img class="lazy" src="./images/t2.jpg" alt="童书">
+		  </a>
+		</li>
+		<li>
+		  <a href="#" dd_name="女装">
+		   <img class="lazy" src="./images/t3.png" alt="女装">
+		  </a>
+		</li>
+		<li>
+		   <a href="#" dd_name="男装">
+		     <img class="lazy" src="./images/t4.jpg" alt="男装">
+		   </a>
+		</li>
+		<li>
+		  <a href="#" dd_name="鞋包配饰">
+		    <img class="lazy" src="./images/t5.jpg" alt="鞋包配饰">
+		  </a>
+		</li>
+		<li>
+		  <a href="#" dd_name="运动户外">
+		     <img class="lazy" src="./images/t6.jpg" alt="运动户外">
+		   </a>
+		</li>
+		<li>
+		  <a href="#" dd_name="家居家装">
+		    <img class="lazy" src="./images/t7.jpg" alt="家居家装">
+		  </a>
+		</li>
+		<li>
+		   <a href="#" dd_name="孕婴童">
+		     <img class="lazy" src="./images/t8.jpg" alt="孕婴童">
+		   </a>
+		</li>
+		<li>
+		   <a href="#" dd_name="数码家电">
+		      <img class="lazy" src="./images/t9.jpg" alt="数码家电">
+		   </a>
+		</li>
+		<li>
+		   <a href="#" dd_name="美食">
+		       <img class="lazy" src="./images/t10.jpg" alt="美食">
+		   </a>
+		</li>
+		<li>
+		    <a href="#" dd_name="彩妆护肤">
+		      <img class="lazy" src="./images/t11.jpg" alt="彩妆护肤">
+		    </a>
+		</li>
+		<li>
+		   <a href="#" dd_name="海外购">
+		     <img class="lazy" src="./images/t12.jpg" alt="海外购">
+		   </a>
+		</li>
+	</ul>
+</section>
+</section>
+<!-- 拖划区 -->
+<section class="rec-prds-wrapper">
+	<h2 class="title">推广商品</h2>
+	<div class="rec-prds swiper-container swiper-container2">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="#">
+					<img class="" src="./images/rem1.jpg" alt="">
+					<div class="rec-prds-detail">
+						<p class="rec-prds-name">美国国家地理-环球少年地理精选集2  全10册  美国国家地理少儿版独家授权</p>
+						<p class="price">
+							<span class="rob">
+								<span class="sign">¥</span>
+								<span class="num">60.00</span>
+								<span class="tail"></span>
+							</span>
+						</p>
+					</div>
+				</a>
+			</div>
+			<div class="swiper-slide">
+			  <a href="#">
+				<img class="" src="./images/rem2.jpg" alt="">
+				<div class="rec-prds-detail">
+					<p class="rec-prds-name">看里面低幼版套装（全套4册)  低幼科普启蒙必备翻翻书</p>
+					<p class="price">
+						<span class="rob">
+							<span class="sign">¥</span>
+							<span class="num">201.80</span>
+							<span class="tail"></span>
+						</span>
+					</p>
+				</div>
+			  </a>
+		    </div>
+		    <div class="swiper-slide">
+		       <a href="#">
+				<img class="" src="./images/rem3.jpg" alt="">
+				<div class="rec-prds-detail">
+					<p class="rec-prds-name">看里面系列第一辑  英国usborne经典科普翻翻书</p>
+					<p class="price">
+						<span class="rob">
+							<span class="sign">¥</span>
+							<span class="num">107.00</span>
+							<span class="tail"></span>
+						</span>
+					</p>
+				</div>
+		       </a>
+	        </div>
+	        <div class="swiper-slide">
+	        	<a href="#">
+	        		<img class="" src="./images/rem4.jpg" alt="">
+	        		<div class="rec-prds-detail">
+	        			<p class="rec-prds-name">美国国家地理—环球少年地理 精选集3  美国国家地理少儿版独家授权</p>
+	        			<p class="price">
+	        				<span class="rob">
+	        					<span class="sign">¥</span>
+	        					<span class="num">78.00</span>
+	        					<span class="tail"></span>
+	        				</span>
+	        			</p>
+	        		</div>
+	        	</a>
+	        </div>
+	        <div class="swiper-slide">
+	        	<a href="#">
+	        		<img class="" src="./images/rem5.jpg" alt="">
+	        		<div class="rec-prds-detail">
+	        			<p class="rec-prds-name">美国国家地理—环球少年地理 精选集3  美国国家地理少儿版独家授权</p>
+	        			<p class="price">
+	        				<span class="rob">
+	        					<span class="sign">¥</span>
+	        					<span class="num">78.00</span>
+	        					<span class="tail"></span>
+	        				</span>
+	        			</p>
+	        		</div>
+	        	</a>
+	        </div>
+	        <div class="swiper-slide">
+	        	<a href="#">
+	        		<img class="" src="./images/rem6.jpg" alt="">
+	        		<div class="rec-prds-detail">
+	        			<p class="rec-prds-name">美国国家地理—环球少年地理 精选集3  美国国家地理少儿版独家授权</p>
+	        			<p class="price">
+	        				<span class="rob">
+	        					<span class="sign">¥</span>
+	        					<span class="num">78.00</span>
+	        					<span class="tail"></span>
+	        				</span>
+	        			</p>
+	        		</div>
+	        	</a>
+	        </div>
+	        <div class="swiper-slide">
+	        	<a href="#">
+	        		<img class="" src="./images/rem7.jpg" alt="">
+	        		<div class="rec-prds-detail">
+	        			<p class="rec-prds-name">美国国家地理—环球少年地理 精选集3  美国国家地理少儿版独家授权</p>
+	        			<p class="price">
+	        				<span class="rob">
+	        					<span class="sign">¥</span>
+	        					<span class="num">78.00</span>
+	        					<span class="tail"></span>
+	        				</span>
+	        			</p>
+	        		</div>
+	        	</a>
+	        </div>
+	        <div class="swiper-slide">
+	        	<a href="#">
+	        		<img class="" src="./images/rem8.jpg" alt="">
+	        		<div class="rec-prds-detail">
+	        			<p class="rec-prds-name">美国国家地理—环球少年地理 精选集3  美国国家地理少儿版独家授权</p>
+	        			<p class="price">
+	        				<span class="rob">
+	        					<span class="sign">¥</span>
+	        					<span class="num">78.00</span>
+	        					<span class="tail"></span>
+	        				</span>
+	        			</p>
+	        		</div>
+	        	</a>
+	        </div>
+	        <div class="swiper-slide">
+	        	<a href="#">
+	        		<img class="" src="./images/rem9.jpg" alt="">
+	        		<div class="rec-prds-detail">
+	        			<p class="rec-prds-name">美国国家地理—环球少年地理 精选集3  美国国家地理少儿版独家授权</p>
+	        			<p class="price">
+	        				<span class="rob">
+	        					<span class="sign">¥</span>
+	        					<span class="num">78.00</span>
+	        					<span class="tail"></span>
+	        				</span>
+	        			</p>
+	        		</div>
+	        	</a>
+	        </div>
+	        <div class="swiper-slide">
+	        	<a href="#">
+	        		<img class="" src="./images/rem10.jpg" alt="">
+	        		<div class="rec-prds-detail">
+	        			<p class="rec-prds-name">美国国家地理—环球少年地理 精选集3  美国国家地理少儿版独家授权</p>
+	        			<p class="price">
+	        				<span class="rob">
+	        					<span class="sign">¥</span>
+	        					<span class="num">78.00</span>
+	        					<span class="tail"></span>
+	        				</span>
+	        			</p>
+	        		</div>
+	        	</a>
+	        </div>
+	    </div>
+    </div>
+</section>	
+
+<section class="app-download-wrapper" data-pos="bottom">
+	<a class="close-app-download"></a>
+	<a class="app-download half" href="javascript:void(0)">
+	  <img class="lazy" src="./images/ad1.jpg">
+	</a>
+	<a class="app-download half" href="javascript:void(0)">
+	  <img class="lazy" src="./images/ad2.jpg">
+	</a>
+</section>
+
+<div class="fixed_box">
+    <a href="javascript:scrollTo(0,0)" class="btn_back" id="backtop">
+      <img style="width:2rem"src="./images/go-top.png">
+    </a>
+</div>
+
+<footer class="footer new">
+	<section class="status-bar">
+		<div class="actions-wrap">
+		<a href="#">登录</a>
+			<a href="#">注册</a>
+		</div>
+		<a class="top" href="javascript:scrollTo(0,0);">TOP</a>
+	</section>
+	<nav class="b-nav">
+		<p>
+			<a href="#" ontouchstart="">提建议</a>
+			<a class="red" href="#" ontouchstart="">触屏版</a>
+			<a href="#" ontouchstart="">电脑版</a>
+			<a href="#" ontouchstart="">帮&nbsp;&nbsp;助</a>
+		</p>
+	</nav>
+	<section class="copyright">
+		<p>Copyright 当当 2016 m.dangdang.com</p>
+	</section>
+</footer>
+    <!-- <footer>
+    	<ul>
+    		<li><a href="#"><span>首页</span></a></li>
+    		<li><a href="#"><span>首页</span></a></li>
+    		<li><a href="#"><span>首页</span></a></li>
+    		<li><a href="#"><span>首页</span></a></li>
+    		<li><a href="#"><span>首页</span></a></li>
+    	</ul>
+    </footer> -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/Swiper/dist/js/swiper.js"></script>
+	<script src="http://cdn.bootcss.com/touchjs/0.2.14/touch.js"></script>
+	<script src=./js/index.js></script>
+	<!-- endbower -->
+</body>
+</html>
